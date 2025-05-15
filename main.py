@@ -7,10 +7,15 @@ https://www.planecrashinfo.com/database.htm
 import os
 import time
 from getdata import scrape_links, process_url_list, filter_lines, fix_urls, extract_plane_crash_data, file_to_array
+from scrubdata import scrub_crash_data
 
 # set the working directory
 os.chdir("D:\Projects\crashtest_env")
 print("Current directory:", os.getcwd())
+
+"""
+Scrape URLs and Data to CSV
+"""
 
 # get links from the main list of years and save to yearindex.txt
 scrape_links("https://www.planecrashinfo.com/database.htm", "data/yearindex.txt", "w")
@@ -42,6 +47,10 @@ if text_array:
 else:
     print("No data was read from the file.")
 
+"""
+Scrub & Clean Data
+"""
 
+scrub_crash_data("data/crashtestdummy.csv", "data/CrashTestInfo_Cleaned.csv")
 
 

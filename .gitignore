@@ -1,0 +1,44 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# Spyder settings
+.spyderproject
+.spyproject
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.venv
+env/
+venv/
+*.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Conda and pip metadata
+*.egg-info/
+pip-wheel-metadata/
+conda-meta/
+
+# Logs and output
+*.log
+
+# Output folders
+/build/
+/dist/
+*.egg
+
+# VS Code or other editor folders
+.vscode/
+.idea/
+
+# CSV files and text files
+.txt
+.csv

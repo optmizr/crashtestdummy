@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Main Pipeline for Plane Crash Dummy Project
-
+https://www.planecrashinfo.com/database.htm
 @author: Ansley Ingram
 """
 import os
@@ -27,9 +27,9 @@ filter_lines("data/crashpages.txt", "data/crashpages_clean.txt")
 fix_urls("data/crashpages_clean.txt", "data/crashurls.txt")
 
 # test run
-# extract_plane_crash_data(
-#     "https://www.planecrashinfo.com/1976/1976-1.htm", "data/crashtestdummy.csv"
-# )
+extract_plane_crash_data(
+    "https://www.planecrashinfo.com/1976/1976-1.htm", "data/crashtestdummy.csv"
+)
 
 # loop through every html file in crashurls.txt and extract data / append to CSV
 text_array = file_to_array("data/crashurls.txt")

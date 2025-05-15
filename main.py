@@ -8,6 +8,8 @@ import os
 import time
 from getdata import scrape_links, process_url_list, filter_lines, fix_urls, extract_plane_crash_data, file_to_array
 from scrubdata import scrub_crash_data
+from analysis import basic_analysis
+from summary_analysis import summarize_crashes
 
 # set the working directory
 os.chdir("D:\Projects\crashtest_env")
@@ -52,5 +54,17 @@ Scrub & Clean Data
 """
 
 scrub_crash_data("data/crashtestdummy.csv", "data/CrashTestInfo_Cleaned.csv")
+
+"""
+Perform Basic Analysis
+"""
+basic_analysis("data/CrashTestInfo_Cleaned.csv")
+
+"""
+Summarize Crashes by Cause
+"""
+summarize_crashes("data/CrashTestInfo_Cleaned.csv")
+
+
 
 
